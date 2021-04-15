@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang>
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Blogin</title>
+</head>
+
+<body>
+
+    <div class="main-screen" onclick="toggleMenu(), toggleSmallModal()"></div>
+
+    <header class="main-header">
+        <div class="header-container container flex space-between align-center">
+            <div class="logo">Blogin</div>
+            <ul class="main-nav flex clean-list">
+                <li><a class="flex justify-content align-center active" href="#">Journal</a></li>
+                <li><a class="flex justify-content align-center" href="#">About</a></li>
+                <li><a class="flex justify-content align-center" href="#">Work</a></li>
+                <li><a class="flex justify-content align-center" href="#">Contact</a></li>
+            </ul>
+            <button class="hamburger" onclick="toggleMenu(), toggleSmallModal()">☰</button>
+        </div>
+    </header>
+    <main class="main-content container flex wrap align-center">
+
+        <div class="card-container flex wrap" onclick="toggleModal()">
+            <img class="card-img" src="img/001.png" alt="">
+            <div class="card-data flex-col">
+                <h2 class="card-title">Duis aute irure dolor in henderit in voluptate.</h2>
+                <p class="card-text">
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum. </br>
+                </p>
+                <p class="card-text">
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...
+                </p>
+                <button class="card-btn" onclick="toggleModal(), toggleSmallModal()">Continue Reading</button>
+            </div>
+        </div>
+
+        <div class="card-container flex wrap" onclick="toggleModal()">
+            <img class="card-img" src="img/002.png" alt="">
+            <div class="card-data flex-col">
+                <h2 class="card-title">Duis aute irure dolor in henderit in voluptate.</h2>
+                <p class="card-text">
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum. </br>
+                </p>
+                <p class="card-text">
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...
+                </p>
+                <button class="card-btn" onclick="toggleModal(), toggleSmallModal()">Continue Reading</button>
+            </div>
+        </div>
+
+        <div class="card-container flex wrap" onclick="toggleModal()">
+            <img class="card-img" src="img/003.png" alt="">
+            <div class="card-data flex-col">
+                <h2 class="card-title">Duis aute irure dolor in henderit in voluptate.</h2>
+                <p class="card-text">
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum. </br>
+                </p>
+                <p class="card-text">
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...
+                </p>
+                <button class="card-btn" onclick="toggleModal(), toggleSmallModal()">Continue Reading</button>
+            </div> 
+        </div>
+
+        <nav class="navbar flex space-between">
+            <button class="navbar-btn prev flex justify-content align-center">Previous</button>
+            <button class="navbar-btn next">Next</button>
+        </nav>
+    </main>
+    <footer class="main-footer">
+        <div class="footer-container container flex align-center"> <!-- those flex categories didn't work -->
+            <div class="logo-bottom">Blogin</div>
+            <small class="small">© 2014 Blogin.com  -  All Rights Reserved  -  Find more free Templates at Pixelhint.com</small>
+                <div class="social-nav flex"> <!-- this flex didn't work -->
+                <a class="fa facebook" href="#"></a>
+                <a class="fa twitter" href="#"></a>
+                <a class="fa instagram" href="#"></a>
+                <a class="fa be" href="#"></a>
+                </div>
+        </div>
+    </footer>
+
+    <modal class="modal flex-col align-center">
+        <button class="modal-btn-close" onclick="toggleModal(), toggleSmallModal()">X</button>
+        <form class="modal-form flex-col align-center" >
+        <h1 class="modal-title flex">Join us to get access to the latest stories!</h1>
+        <label class="modal-email-label" for="email">E-mail:</label>
+        <input class="modal-email-input" type="email" id="email" placeholder="example@mail.com"/>
+        <button class="modal-btn-submit" onclick="toggleModal(), toggleSmallModal()">Submit</button>
+        </form>
+    </modal>
+
+    <script>
+        function toggleMenu() {
+            document.body.classList.toggle('menu-open')
+        }
+
+        function toggleModal() {
+            document.body.classList.toggle('modal-open')
+        }
+
+        function toggleSmallModal() {
+            document.body.classList.toggle('small-modal-open')
+        }
+    </script>
+</body>
+
+</html>
